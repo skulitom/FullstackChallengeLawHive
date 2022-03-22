@@ -260,7 +260,7 @@ Display the contents of the news article alongside the job posting in the list.
 # Your TODO 
 
 - [x] Initial codebase setup (hello world)
-- [ ] Story 1 
+- [x] Story 1 
 - [ ] Story 2
 - [ ] Story 3
 - [ ] Story 4
@@ -268,3 +268,10 @@ Display the contents of the news article alongside the job posting in the list.
 
 - [ ] Written notes on incomplete stories
 - [ ] Written notes on weaknesses, tradeoffs and improvements
+
+# Story 1 Notes
+- A lot of front end code is currently in App.tsx initially will need to spend more time splitting it up
+- enabled Cors on backend, but Ideally I saw on the NestJS documentation that a Helmet should be used instead
+- environment variable management needs to be improved
+- Further testing should be done with mongo-init.js to make sure the user is added correctly to mongodb
+- Idially should not commit the .env file to git but will do that to make it easier to work with for now. Will later need to add .env to .gitignore

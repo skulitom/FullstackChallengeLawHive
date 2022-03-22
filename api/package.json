@@ -22,12 +22,17 @@
   },
   "dependencies": {
     "@nestjs/common": "^8.0.0",
+    "@nestjs/config": "^2.0.0",
     "@nestjs/core": "^8.0.0",
+    "@nestjs/mongoose": "nestjs/mongoose",
     "@nestjs/platform-express": "^8.0.0",
+    "@typegoose/typegoose": "^9.7.0",
+    "@types/mongoose": "^5.11.97",
+    "mongoose": "6.2.7",
+    "nestjs-typegoose": "^7.1.38",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
-    "rxjs": "^7.2.0",
-    "mongoose": "6.2.7"
+    "rxjs": "^7.2.0"
   },
   "devDependencies": {
     "@nestjs/cli": "^8.0.0",
