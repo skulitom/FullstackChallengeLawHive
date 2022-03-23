@@ -14,4 +14,25 @@ export class Job {
         trim: true,
     })
     description: string;
+
+    @prop({
+        required: true,
+        lowercase: true,
+        trim: true,
+    })
+    feeStructure: string;
+
+    @prop({
+        required: false,
+        lowercase: true,
+        trim: true,
+    })
+    feePercentage: string;
+
+    @prop({
+        required: false,
+        lowercase: true,
+        trim: true,
+    })
+    feeAmount: string;
 }

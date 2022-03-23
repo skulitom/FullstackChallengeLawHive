@@ -16,7 +16,6 @@ export class JobController {
     @UseInterceptors(FileInterceptor('file'))
     @Post('createJob')
     createJob(@Body() newJob: CreateJobDto): Promise<Job> {
-        console.log(newJob);
         return this.jobService.addJob(newJob);
     }
 }

@@ -261,7 +261,7 @@ Display the contents of the news article alongside the job posting in the list.
 
 - [x] Initial codebase setup (hello world)
 - [x] Story 1 
-- [ ] Story 2
+- [x] Story 2
 - [ ] Story 3
 - [ ] Story 4
 - [ ] Story 5
@@ -275,3 +275,9 @@ Display the contents of the news article alongside the job posting in the list.
 - environment variable management needs to be improved
 - Further testing should be done with mongo-init.js to make sure the user is added correctly to mongodb
 - Idially should not commit the .env file to git but will do that to make it easier to work with for now. Will later need to add .env to .gitignore
+
+# Story 2 Notes
+- Currently data is not validated on the backend, ideally will need to create pipes to validate feeStructure, feeAmount and feePercentage. Eg converting fee percentage to number and making sure it's between 0 and 100
+- Optional decorators in dto might not be ideal in this situation, could be solved by implementing some conditional logic based on the fee strucutre.
+- improved the state of the job display, to store just the data and not a list of components
+- improved front end structure, split it into more components.
