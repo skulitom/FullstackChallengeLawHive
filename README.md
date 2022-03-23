@@ -296,3 +296,13 @@ db.createUser(
 
 - Should perhaps consider using RxJs
 - Any tipe is used too often
+
+# Completing Story 4 and 5
+- add minimum settlement amount on the back end
+- constrict user input on the front end to not go lower than the minimum
+- add a number text box for no-win-no-fee to input minimum settlement
+- check minimum settlement is valid on the back end
+
+- add a url string to the job on the backend
+- modify front end job creation to include a URL instead of description
+- when creating a job check URL string against previously queried URLs, if they match copy description. Else query URL for description data
