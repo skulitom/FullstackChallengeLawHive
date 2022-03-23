@@ -262,7 +262,7 @@ Display the contents of the news article alongside the job posting in the list.
 - [x] Initial codebase setup (hello world)
 - [x] Story 1 
 - [x] Story 2
-- [ ] Story 3
+- [x] Story 3
 - [ ] Story 4
 - [ ] Story 5
 
@@ -281,3 +281,18 @@ Display the contents of the news article alongside the job posting in the list.
 - Optional decorators in dto might not be ideal in this situation, could be solved by implementing some conditional logic based on the fee strucutre.
 - improved the state of the job display, to store just the data and not a list of components
 - improved front end structure, split it into more components.
+
+# Story 3 Notes
+- Issue in the test setup, I wrote the test but couldn't debug the setup issue in time
+- Some functions are a bit too long on the front end, would need to split it up into more components/ functions
+- Security vulnrabilities with some parameters
+- Found out that the user is not created automatically for mongo db
+
+db.createUser(
+{	user: "Artem",
+	pwd: "qwerty",
+
+	roles:[{role: "readWrite" , db:"nest"}]})
+
+- Should perhaps consider using RxJs
+- Any tipe is used too often

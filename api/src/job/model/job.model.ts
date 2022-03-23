@@ -35,4 +35,18 @@ export class Job {
         trim: true,
     })
     feeAmount: string;
+
+    @prop({
+        required: false,
+        lowercase: true,
+        trim: true,
+    })
+    settlementAmount: string;
+
+    @prop({
+        required: false,
+        lowercase: true,
+        trim: true,
+    })
+    paidAmount: string;
 }

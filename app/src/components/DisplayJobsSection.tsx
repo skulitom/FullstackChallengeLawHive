@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { Box, CircularProgress, Stack } from '@mui/material';
 import Grid from '@mui/material/Grid';
-import JobPosting, {JobPostingProps} from '../components/JobPosting';
+import JobPosting from '../components/JobPosting';
 import { RestAPI } from '../api/RestAPI'
 
 export interface DisplayJobsProps {
@@ -25,13 +25,15 @@ function DisplayJobsSection(props: DisplayJobsProps) {
     const getJobs = () => {
     RestAPI.getJobPostings().then((res) => {
         let jobs: any = [];
-        res.data.forEach((job: JobPostingProps) => {
+        res.data.forEach((job: any) => {
         jobs.push({
+            '_id': job._id,
             'title': job.title,
             'description': job.description,
             'feeStructure': job.feeStructure,
             'feePercentage': job.feePercentage,
-            'feeAmount': job.feeAmount
+            'feeAmount': job.feeAmount,
+            'paidAmount': job.paidAmount
         });
         });
         setJobPostings(jobs);
@@ -47,12 +49,15 @@ function DisplayJobsSection(props: DisplayJobsProps) {
           return <Stack gap={2} width={'100%'}>
               {jobPostings.map((job, index) => {
                   return <JobPosting
+                    _id={job['_id']}
                     key={index}
                     title={job['title']}
                     description={job['description']}
                     feeStructure={job['feeStructure']}
                     feePercentage={job['feePercentage']}
                     feeAmount={job['feeAmount']}
+                    paidAmount={job['paidAmount']}
+                    getJobs={() => getJobs()}
                   />
               })}
           </Stack>;
